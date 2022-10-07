@@ -3,12 +3,12 @@
 You can create houses in strapi.
 
 ## Install Node Modules
-In Terminal
-cd ./frontend
-npm -i
-cd ..
-cd ./backend
-npm -i
+>In Terminal
+>cd ./frontend
+>npm -i
+>cd ..
+>cd ./backend
+>npm -i
 
 ## Run The App
 In Terminal
