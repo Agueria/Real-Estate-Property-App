@@ -1,4 +1,4 @@
-# Real estate property App
+# Real Estate Property App
 
 You can create houses in strapi.
 
