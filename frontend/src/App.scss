@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    list-style: none;
+}
+
+:root {
+    --green: rgb(4, 63, 70);
+    --dark-green: rgb(26, 55, 58);
+    --gray: rgb(136, 136, 136);
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+
+    @media screen and (min-width: 1500px) {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+}
+
+main > * {
+    padding: 0 3rem;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 2rem;
+    }
+    @media screen and (max-width: 425px) {
+        padding: 0 1.5rem;
+    }
+}
+
+img {
+    user-select: none;
+}
+
+input,
+select {
+    font-family: "Poppins", sans-serif;
+}

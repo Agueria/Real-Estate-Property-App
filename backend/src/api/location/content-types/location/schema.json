@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "houses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::house.house",
+      "mappedBy": "location"
+    },
+    "City": {
+      "type": "string",
+      "required": true,
+      "default": "ENTER_A_CITY"
+    }
+  }
+}

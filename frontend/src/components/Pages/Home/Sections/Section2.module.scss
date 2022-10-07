@@ -1,0 +1,109 @@
+// BUY RENT SELL  SECTION
+.section_2 {
+    display: grid;
+    grid-template-columns: 15% 35% 50%;
+    margin-top: 8rem;
+}
+
+.section_2_image_container {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    margin-right: 2rem;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 700px;
+        @media screen and (max-width: 1024px) {
+            height: 650px;
+        }
+        @media screen and (max-width: 678px) {
+            height: 850px;
+            width: 400px;
+        }
+    }
+}
+
+.section_2_slogan {
+    grid-column: 3/4;
+    grid-row: 1/2;
+
+    @media screen and (max-width: 678px) {
+        grid-column: 2/4;
+        background: rgba(255, 255, 255, 0.4);
+        padding: 0.2rem 1.5rem;
+        text-align: start;
+    }
+
+    @media screen and (max-width: 500px) {
+        grid-column: 1/4;
+    }
+
+    h1 {
+        color: var(--dark-green);
+        font-size: 3rem;
+        width: 80%;
+        @media screen and (max-width: 1024px) {
+            font-size: 2.5rem;
+            width: 90%;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 2.2rem;
+            width: 95%;
+        }
+        @media screen and (max-width: 678px) {
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.selection {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    height: fit-content;
+    gap: 1.2rem;
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+
+    @media screen and (max-width: 805px) {
+        grid-column: 1/4;
+        margin-left: 1rem;
+        gap: 1.5rem;
+    }
+
+    @media screen and (max-width: 678px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .buy,
+    .sell,
+    .rent {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: var(--gray);
+            margin-bottom: 0.8rem;
+            font-size: 0.8rem;
+        }
+        div {
+            margin-top: auto;
+        }
+    }
+}

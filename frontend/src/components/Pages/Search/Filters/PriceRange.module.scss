@@ -1,0 +1,62 @@
+.container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.minPrice,
+.maxPrice {
+    position: relative;
+    border: 1px solid var(--dark-green);
+    @media screen and (max-width: 768px) {
+        margin-right: 1.5rem;
+    }
+    @media screen and (max-width: 500px) {
+        margin: 0;
+    }
+    select {
+        width: 10rem;
+        padding: 0.3rem 1rem;
+        border: none;
+        background: white;
+        font-family: "Poppins", sans-serif;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+        &:focus,
+        &:hover {
+            border: none;
+            outline: none;
+        }
+        option {
+            background: white;
+        }
+    }
+    input {
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80%;
+        padding-left: 5px;
+        font-family: "Poppins", sans-serif;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+}

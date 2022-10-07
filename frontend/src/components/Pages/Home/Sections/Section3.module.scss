@@ -1,0 +1,21 @@
+//BEST HOUSE OF YEARS
+.section_3 {
+    margin-top: 8rem;
+    overflow-x: hidden;
+
+    .section_3_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        h1 {
+            color: var(--dark-green);
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.cards {
+    padding-block: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.filters {
+    user-select: none;
+    .categories {
+        margin-top: 1rem;
+        display: flex;
+        @media screen and (max-width: 500px) {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+        .category {
+            width: 100%;
+        }
+    }
+}

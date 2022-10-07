@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "houses",
+  "info": {
+    "singularName": "house",
+    "pluralName": "houses",
+    "displayName": "house",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Street": {
+      "type": "string",
+      "required": true
+    },
+    "Rooms": {
+      "type": "integer",
+      "required": true
+    },
+    "Bedrooms": {
+      "type": "integer",
+      "required": true
+    },
+    "Bathrooms": {
+      "type": "integer",
+      "required": true
+    },
+    "Short_Andress": {
+      "type": "string",
+      "required": true
+    },
+    "Preview_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "houses"
+    },
+    "Price": {
+      "type": "decimal",
+      "default": 0
+    },
+    "Rent": {
+      "type": "decimal",
+      "default": 0
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "houses"
+    },
+    "Neighbourhood": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

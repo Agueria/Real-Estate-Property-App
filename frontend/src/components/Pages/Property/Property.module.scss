@@ -1,0 +1,20 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.center {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.house {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}

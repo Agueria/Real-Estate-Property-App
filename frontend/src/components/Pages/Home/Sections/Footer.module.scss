@@ -1,0 +1,94 @@
+footer {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    grid-column: 1/5;
+
+    @media screen and (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .brand,
+    .services,
+    .company,
+    .support,
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        li:first-child {
+            span {
+                color: var(--dark-green);
+                font-weight: 600;
+                font-size: 1.2rem;
+            }
+        }
+
+        li:not(:first-child) {
+            a,
+            span,
+            p,
+            svg {
+                color: var(--gray);
+            }
+
+            p {
+                width: 200px;
+                font-size: 0.8rem;
+            }
+
+            a {
+                transition: color ease-in-out 200ms;
+                &:hover {
+                    color: var(--dark-green);
+                }
+            }
+
+            .socials {
+                display: flex;
+                gap: 0.5rem;
+                svg {
+                    font-size: 1.3rem;
+                    transition: color ease-in-out 200ms;
+                    &:hover {
+                        color: var(--dark-green);
+                    }
+                }
+            }
+
+            .subscribe_input {
+                padding: 0.5rem 1rem;
+                border: 1px solid var(--gray);
+                font-size: 1.1rem;
+                display: flex;
+                align-items: center;
+                width: max-content;
+                button {
+                    background: none;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.2rem 0.5rem;
+                    cursor: pointer;
+                    &:hover svg {
+                        color: var(--dark-green);
+                    }
+                    svg {
+                        font-size: 1.2rem;
+                        transition: color ease-in-out 300ms;
+                    }
+                }
+                input {
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.section_4 {
+    margin-top: 6rem;
+    overflow: hidden;
+
+    .section_4_title {
+        position: relative;
+        margin-bottom: 2rem;
+        padding-left: 10vw;
+        padding-top: 6rem;
+        @media screen and (max-width: 425px) {
+            padding-top: 3rem;
+        }
+        h1 {
+            color: rgb(7, 37, 35);
+            font-size: 2.5rem;
+            width: 60%;
+            @media screen and (max-width: 1200px) {
+                width: 80%;
+            }
+            @media screen and (max-width: 1000px) {
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 2rem;
+                width: 100%;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            top: 0;
+            left: 0;
+            background: rgb(238, 238, 238);
+            width: 100vw;
+            height: 400px;
+        }
+    }
+
+    .section_4_content {
+        display: grid;
+        grid-template-columns: 50% 20% 15% 15%;
+        padding-left: 10vw;
+        position: relative;
+
+        @media screen and (max-width: 665px) {
+            padding-left: 2rem;
+        }
+
+        @media screen and (max-width: 425px) {
+            padding-left: 0rem;
+        }
+
+        .image_container {
+            grid-row: 1/2;
+            grid-column: 1/3;
+            img {
+                width: 800px;
+                height: 400px;
+                object-fit: cover;
+                @media screen and (max-width: 1200px) {
+                    width: 600px;
+                }
+                @media screen and (max-width: 890px) {
+                    width: 500px;
+                }
+                @media screen and (max-width: 425px) {
+                    height: 580px;
+                }
+            }
+        }
+
+        .info {
+            grid-row: 1/2;
+            grid-column: 2/4;
+            padding: 2rem 3rem;
+            margin: 3rem 0;
+            background: white;
+
+            @media screen and (max-width: 1066px) {
+                grid-column: 2/5;
+            }
+
+            @media screen and (max-width: 890px) {
+                padding: 2rem;
+            }
+
+            @media screen and (max-width: 665px) {
+                grid-column: 1/5;
+                margin-left: 30vw;
+            }
+
+            @media screen and (max-width: 570px) {
+                grid-column: 1/3;
+                margin-left: 3rem;
+                width: 300px;
+            }
+
+            @media screen and (max-width: 425px) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 1rem;
+                padding-top: 2rem;
+                margin: 0;
+                grid-column: unset;
+                width: 80vw;
+            }
+
+            p {
+                color: var(--gray);
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                @media screen and (max-width: 425px) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .rows {
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                @media screen and (max-width: 570px) {
+                    justify-content: unset;
+                }
+
+                @media screen and (max-width: 425px) {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            .row_1,
+            .row_2 {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .row_1 {
+                margin-bottom: 1rem;
+            }
+
+            .fact {
+                h2 {
+                    color: var(--dark-green);
+                    font-size: 1.3rem;
+                }
+                h3 {
+                    color: var(--gray);
+                    font-weight: 500;
+                    font-size: 0.8rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+a {
+    text-decoration: none;
+}
+
+.navbar_container {
+    position: relative;
+    z-index: 999;
+    padding-block: 1.5rem;
+    @media screen and (max-width: 600px) {
+        padding-block: 1rem;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand_logo a {
+    font-size: 1.3rem;
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+.navbar_ul {
+    display: flex;
+    gap: 1rem;
+    @media screen and (max-width: 600px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-size: 1.1rem;
+        background: var(--dark-green);
+        padding-top: 6rem;
+        min-height: 100vh;
+        transform: translateX(100%);
+        transition: transform ease-in-out 200ms;
+    }
+
+    .login {
+        display: none;
+        @media screen and (max-width: 600px) {
+            display: block;
+            color: whitesmoke;
+            transition: color 200ms ease;
+            padding-right: 5rem;
+            padding-left: 5rem;
+            &:hover {
+                color: rgb(66, 182, 118);
+            }
+        }
+    }
+
+    .mobile_close {
+        display: none;
+        @media screen and (max-width: 600px) {
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            padding: 0.3rem;
+            font-size: 1.6rem;
+            color: white;
+        }
+    }
+}
+
+.ul_active {
+    transform: translateX(0);
+}
+
+.navlink a {
+    color: rgb(112, 112, 112);
+    transition: color 200ms ease;
+    @media screen and (max-width: 600px) {
+        color: whitesmoke;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    &:hover {
+        color: var(--dark-green);
+        @media screen and (max-width: 600px) {
+            color: rgb(66, 182, 118);
+        }
+    }
+}
+
+.active {
+    color: var(--dark-green) !important;
+    font-weight: 500;
+    @media screen and (max-width: 600px) {
+        color: rgb(66, 182, 118) !important;
+    }
+}
+
+.login_container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    color: whitesmoke;
+    font-weight: 500;
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+
+    &:hover {
+        svg {
+            transform: translateX(5px);
+        }
+    }
+
+    a {
+        color: var(--dark-green);
+        font-weight: 500;
+    }
+
+    svg {
+        font-size: 1.3rem;
+        transition: all 200ms ease-in-out;
+    }
+}
+
+.mobile_menu {
+    display: none;
+    @media screen and (max-width: 600px) {
+        display: block;
+        font-size: 1.4rem;
+        color: whitesmoke;
+        cursor: pointer;
+        padding: 0.3rem;
+    }
+}
